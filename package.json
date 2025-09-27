@@ -1,0 +1,37 @@
+{
+  "name": "website-translator",
+  "version": "1.0.0",
+  "description": "A beautiful, responsive language translator for websites with 12+ language support",
+  "main": "translator.js",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "dev": "python -m http.server 3000",
+    "build": "echo 'No build process needed for static files'",
+    "deploy": "echo 'Ready for Netlify deployment'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GladiatorCodee/website-translator.git"
+  },
+  "keywords": [
+    "translator",
+    "language",
+    "website",
+    "i18n",
+    "internationalization",
+    "multilingual",
+    "responsive",
+    "javascript"
+  ],
+  "author": "GladiatorCodee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GladiatorCodee/website-translator/issues"
+  },
+  "homepage": "https://github.com/GladiatorCodee/website-translator#readme",
+  "devDependencies": {},
+  "dependencies": {},
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

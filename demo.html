@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Translator Demo</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .demo-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+        .demo-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .demo-section {
+            margin-bottom: 25px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+        .demo-section h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Language Translator Button -->
+    <div class="translator-container">
+        <button id="translateBtn" class="translate-button">
+            <span class="translate-icon">🌐</span>
+            <span class="translate-text">Translate</span>
+        </button>
+        <div class="language-selector" id="languageSelector">
+            <div class="language-option" data-lang="en">English</div>
+            <div class="language-option" data-lang="es">Español</div>
+            <div class="language-option" data-lang="fr">Français</div>
+            <div class="language-option" data-lang="de">Deutsch</div>
+            <div class="language-option" data-lang="it">Italiano</div>
+            <div class="language-option" data-lang="pt">Português</div>
+            <div class="language-option" data-lang="ru">Русский</div>
+            <div class="language-option" data-lang="ja">日本語</div>
+            <div class="language-option" data-lang="ko">한국어</div>
+            <div class="language-option" data-lang="zh">中文</div>
+            <div class="language-option" data-lang="ar">العربية</div>
+            <div class="language-option" data-lang="hi">हिन्दी</div>
+        </div>
+    </div>
+
+    <div class="demo-container">
+        <div class="demo-header">
+            <h1 data-translate="demo.title">Website Translator Demo</h1>
+            <p data-translate="demo.subtitle">Click the translate button in the top-right corner to see this page in different languages!</p>
+        </div>
+
+        <div class="demo-section">
+            <h3 data-translate="demo.features.title">Features</h3>
+            <ul>
+                <li data-translate="demo.features.item1">12+ Language Support</li>
+                <li data-translate="demo.features.item2">Beautiful Modern UI</li>
+                <li data-translate="demo.features.item3">Responsive Design</li>
+                <li data-translate="demo.features.item4">RTL Language Support</li>
+                <li data-translate="demo.features.item5">Keyboard Shortcuts</li>
+            </ul>
+        </div>
+
+        <div class="demo-section">
+            <h3 data-translate="demo.usage.title">How to Use</h3>
+            <p data-translate="demo.usage.step1">1. Click the globe button (🌐) in the top-right corner</p>
+            <p data-translate="demo.usage.step2">2. Select your preferred language from the dropdown</p>
+            <p data-translate="demo.usage.step3">3. Watch the page translate instantly!</p>
+            <p data-translate="demo.usage.step4">4. Use Ctrl+Shift+T as a keyboard shortcut</p>
+        </div>
+
+        <div class="demo-section">
+            <h3 data-translate="demo.integration.title">Easy Integration</h3>
+            <p data-translate="demo.integration.description">Simply add the data-translate attribute to any HTML element you want to translate, and include our CSS and JavaScript files.</p>
+        </div>
+
+        <div class="demo-section">
+            <h3 data-translate="demo.contact.title">Get Started</h3>
+            <p data-translate="demo.contact.description">Download the files and integrate them into your website for instant multilingual support!</p>
+            <button class="cta-button" data-translate="demo.contact.button">Download Now</button>
+        </div>
+    </div>
+
+    <script src="translator.js"></script>
+    <script>
+        // Add demo-specific translations
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.websiteTranslator) {
+                window.websiteTranslator.addTranslations('en', {
+                    'demo.title': 'Website Translator Demo',
+                    'demo.subtitle': 'Click the translate button in the top-right corner to see this page in different languages!',
+                    'demo.features.title': 'Features',
+                    'demo.features.item1': '12+ Language Support',
+                    'demo.features.item2': 'Beautiful Modern UI',
+                    'demo.features.item3': 'Responsive Design',
+                    'demo.features.item4': 'RTL Language Support',
+                    'demo.features.item5': 'Keyboard Shortcuts',
+                    'demo.usage.title': 'How to Use',
+                    'demo.usage.step1': '1. Click the globe button (🌐) in the top-right corner',
+                    'demo.usage.step2': '2. Select your preferred language from the dropdown',
+                    'demo.usage.step3': '3. Watch the page translate instantly!',
+                    'demo.usage.step4': '4. Use Ctrl+Shift+T as a keyboard shortcut',
+                    'demo.integration.title': 'Easy Integration',
+                    'demo.integration.description': 'Simply add the data-translate attribute to any HTML element you want to translate, and include our CSS and JavaScript files.',
+                    'demo.contact.title': 'Get Started',
+                    'demo.contact.description': 'Download the files and integrate them into your website for instant multilingual support!',
+                    'demo.contact.button': 'Download Now'
+                });
+
+                // Add Spanish translations
+                window.websiteTranslator.addTranslations('es', {
+                    'demo.title': 'Demostración del Traductor de Sitios Web',
+                    'demo.subtitle': '¡Haz clic en el botón de traducir en la esquina superior derecha para ver esta página en diferentes idiomas!',
+                    'demo.features.title': 'Características',
+                    'demo.features.item1': 'Soporte para 12+ Idiomas',
+                    'demo.features.item2': 'Interfaz Moderna y Hermosa',
+                    'demo.features.item3': 'Diseño Responsivo',
+                    'demo.features.item4': 'Soporte para Idiomas RTL',
+                    'demo.features.item5': 'Atajos de Teclado',
+                    'demo.usage.title': 'Cómo Usar',
+                    'demo.usage.step1': '1. Haz clic en el botón del globo (🌐) en la esquina superior derecha',
+                    'demo.usage.step2': '2. Selecciona tu idioma preferido del menú desplegable',
+                    'demo.usage.step3': '3. ¡Mira cómo la página se traduce instantáneamente!',
+                    'demo.usage.step4': '4. Usa Ctrl+Shift+T como atajo de teclado',
+                    'demo.integration.title': 'Integración Fácil',
+                    'demo.integration.description': 'Simplemente agrega el atributo data-translate a cualquier elemento HTML que quieras traducir, e incluye nuestros archivos CSS y JavaScript.',
+                    'demo.contact.title': 'Comenzar',
+                    'demo.contact.description': '¡Descarga los archivos e intégralos en tu sitio web para obtener soporte multilingüe instantáneo!',
+                    'demo.contact.button': 'Descargar Ahora'
+                });
+
+                // Add French translations
+                window.websiteTranslator.addTranslations('fr', {
+                    'demo.title': 'Démonstration du Traducteur de Site Web',
+                    'demo.subtitle': 'Cliquez sur le bouton de traduction dans le coin supérieur droit pour voir cette page dans différentes langues !',
+                    'demo.features.title': 'Fonctionnalités',
+                    'demo.features.item1': 'Support de 12+ Langues',
+                    'demo.features.item2': 'Interface Moderne et Belle',
+                    'demo.features.item3': 'Design Responsive',
+                    'demo.features.item4': 'Support des Langues RTL',
+                    'demo.features.item5': 'Raccourcis Clavier',
+                    'demo.usage.title': 'Comment Utiliser',
+                    'demo.usage.step1': '1. Cliquez sur le bouton globe (🌐) dans le coin supérieur droit',
+                    'demo.usage.step2': '2. Sélectionnez votre langue préférée dans le menu déroulant',
+                    'demo.usage.step3': '3. Regardez la page se traduire instantanément !',
+                    'demo.usage.step4': '4. Utilisez Ctrl+Shift+T comme raccourci clavier',
+                    'demo.integration.title': 'Intégration Facile',
+                    'demo.integration.description': 'Ajoutez simplement l\'attribut data-translate à n\'importe quel élément HTML que vous voulez traduire, et incluez nos fichiers CSS et JavaScript.',
+                    'demo.contact.title': 'Commencer',
+                    'demo.contact.description': 'Téléchargez les fichiers et intégrez-les dans votre site web pour un support multilingue instantané !',
+                    'demo.contact.button': 'Télécharger Maintenant'
+                });
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Language Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Language Translator Button -->
+    <div class="translator-container">
+        <button id="translateBtn" class="translate-button">
+            <span class="translate-icon">🌐</span>
+            <span class="translate-text">Translate</span>
+        </button>
+        <div class="language-selector" id="languageSelector">
+            <div class="language-option" data-lang="en">English</div>
+            <div class="language-option" data-lang="es">Español</div>
+            <div class="language-option" data-lang="fr">Français</div>
+            <div class="language-option" data-lang="de">Deutsch</div>
+            <div class="language-option" data-lang="it">Italiano</div>
+            <div class="language-option" data-lang="pt">Português</div>
+            <div class="language-option" data-lang="ru">Русский</div>
+            <div class="language-option" data-lang="ja">日本語</div>
+            <div class="language-option" data-lang="ko">한국어</div>
+            <div class="language-option" data-lang="zh">中文</div>
+            <div class="language-option" data-lang="ar">العربية</div>
+            <div class="language-option" data-lang="hi">हिन्दी</div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <header>
+        <nav>
+            <div class="logo">MyWebsite</div>
+            <ul class="nav-links">
+                <li><a href="#home" data-translate="nav.home">Home</a></li>
+                <li><a href="#about" data-translate="nav.about">About</a></li>
+                <li><a href="#services" data-translate="nav.services">Services</a></li>
+                <li><a href="#contact" data-translate="nav.contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1 data-translate="hero.title">Welcome to Our Amazing Website</h1>
+            <p data-translate="hero.subtitle">Discover the best services and solutions for your business needs. We provide innovative solutions that help you grow.</p>
+            <button class="cta-button" data-translate="hero.button">Get Started</button>
+        </section>
+
+        <section class="features">
+            <h2 data-translate="features.title">Our Features</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3 data-translate="features.card1.title">Fast Performance</h3>
+                    <p data-translate="features.card1.description">Our platform is optimized for speed and efficiency, ensuring the best user experience.</p>
+                </div>
+                <div class="feature-card">
+                    <h3 data-translate="features.card2.title">Secure & Reliable</h3>
+                    <p data-translate="features.card2.description">Your data is protected with enterprise-grade security measures and 99.9% uptime guarantee.</p>
+                </div>
+                <div class="feature-card">
+                    <h3 data-translate="features.card3.title">Easy to Use</h3>
+                    <p data-translate="features.card3.description">Intuitive interface designed for users of all skill levels with comprehensive documentation.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="about">
+            <h2 data-translate="about.title">About Us</h2>
+            <p data-translate="about.description">We are a team of passionate developers and designers dedicated to creating exceptional digital experiences. Our mission is to help businesses thrive in the digital world through innovative technology solutions.</p>
+        </section>
+
+        <section class="contact">
+            <h2 data-translate="contact.title">Get in Touch</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name" data-translate="contact.form.name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email" data-translate="contact.form.email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="message" data-translate="contact.form.message">Message</label>
+                    <textarea id="message" name="message" placeholder="Enter your message"></textarea>
+                </div>
+                <button type="submit" data-translate="contact.form.submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p data-translate="footer.copyright">&copy; 2024 MyWebsite. All rights reserved.</p>
+    </footer>
+
+    <script src="translator.js"></script>
+</body>
+</html>
+
