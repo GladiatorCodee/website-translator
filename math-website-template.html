@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Website - HelpMath</title>
+    
+    <!-- Your existing math website CSS goes here -->
+    <style>
+        /* Add your original math website styles here */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 1rem 0;
+            margin-bottom: 2rem;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            transition: background 0.3s ease;
+        }
+        
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .hero {
+            background: white;
+            padding: 3rem;
+            margin: 2rem 0;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .math-tools {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .math-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .math-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .math-card h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+        
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+    </style>
+    
+    <!-- Add translator CSS -->
+    <link rel="stylesheet" href="translator-only.css">
+</head>
+<body>
+    <!-- Add translator button -->
+    <div class="translator-container">
+        <button id="translateBtn" class="translate-button">
+            <span class="translate-icon">🌐</span>
+            <span class="translate-text">Translate</span>
+        </button>
+        <div class="language-selector" id="languageSelector">
+            <div class="language-option" data-lang="en">English</div>
+            <div class="language-option" data-lang="es">Español</div>
+            <div class="language-option" data-lang="fr">Français</div>
+            <div class="language-option" data-lang="de">Deutsch</div>
+            <div class="language-option" data-lang="it">Italiano</div>
+            <div class="language-option" data-lang="pt">Português</div>
+            <div class="language-option" data-lang="ru">Русский</div>
+            <div class="language-option" data-lang="ja">日本語</div>
+            <div class="language-option" data-lang="ko">한국어</div>
+            <div class="language-option" data-lang="zh">中文</div>
+            <div class="language-option" data-lang="ar">العربية</div>
+            <div class="language-option" data-lang="hi">हिन्दी</div>
+        </div>
+    </div>
+
+    <!-- Your math website content -->
+    <header>
+        <nav class="container">
+            <ul>
+                <li><a href="#home" data-translate="nav.home">Home</a></li>
+                <li><a href="#calculator" data-translate="nav.calculator">Calculator</a></li>
+                <li><a href="#problems" data-translate="nav.problems">Problems</a></li>
+                <li><a href="#solutions" data-translate="nav.solutions">Solutions</a></li>
+                <li><a href="#contact" data-translate="nav.contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="hero">
+            <h1 data-translate="hero.title">Math Learning Platform</h1>
+            <p data-translate="hero.subtitle">Master mathematics with interactive tools, practice problems, and step-by-step solutions.</p>
+        </div>
+
+        <div class="math-tools">
+            <div class="math-card">
+                <h3 data-translate="tools.calculator.title">Scientific Calculator</h3>
+                <p data-translate="tools.calculator.description">Advanced calculator with trigonometry, algebra, and calculus functions.</p>
+                <button data-translate="tools.calculator.button">Open Calculator</button>
+            </div>
+            
+            <div class="math-card">
+                <h3 data-translate="tools.problems.title">Math Problems</h3>
+                <p data-translate="tools.problems.description">Practice with thousands of problems from basic arithmetic to advanced calculus.</p>
+                <button data-translate="tools.problems.button">Start Practice</button>
+            </div>
+            
+            <div class="math-card">
+                <h3 data-translate="tools.solutions.title">Step-by-Step Solutions</h3>
+                <p data-translate="tools.solutions.description">Detailed explanations and solutions to help you understand every concept.</p>
+                <button data-translate="tools.solutions.button">View Solutions</button>
+            </div>
+        </div>
+
+        <div class="hero">
+            <h2 data-translate="features.title">Why Choose Our Math Platform?</h2>
+            <div class="math-tools">
+                <div class="math-card">
+                    <h3 data-translate="features.interactive.title">Interactive Learning</h3>
+                    <p data-translate="features.interactive.description">Engaging exercises that adapt to your learning pace.</p>
+                </div>
+                <div class="math-card">
+                    <h3 data-translate="features.progress.title">Track Progress</h3>
+                    <p data-translate="features.progress.description">Monitor your improvement with detailed analytics and reports.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p data-translate="footer.copyright">&copy; 2024 HelpMath - Math Learning Platform. All rights reserved.</p>
+        <p data-translate="footer.description">Making mathematics accessible to everyone, everywhere.</p>
+    </footer>
+
+    <!-- Add translator JavaScript -->
+    <script src="translator-only.js"></script>
+</body>
+</html>

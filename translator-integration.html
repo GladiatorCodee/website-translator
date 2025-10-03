@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Website with Translator</title>
+    
+    <!-- Your existing math website CSS -->
+    <style>
+        /* Your existing math website styles go here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 1rem 0;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            margin: 0;
+            padding: 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+        .hero {
+            background: white;
+            padding: 3rem;
+            margin: 2rem 0;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .math-section {
+            background: white;
+            padding: 2rem;
+            margin: 1rem 0;
+            border-radius: 10px;
+        }
+        footer {
+            background: #34495e;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+    </style>
+    
+    <!-- Add translator CSS -->
+    <link rel="stylesheet" href="translator-only.css">
+</head>
+<body>
+    <!-- Add translator button (copy this to your existing math website) -->
+    <div class="translator-container">
+        <button id="translateBtn" class="translate-button">
+            <span class="translate-icon">🌐</span>
+            <span class="translate-text">Translate</span>
+        </button>
+        <div class="language-selector" id="languageSelector">
+            <div class="language-option" data-lang="en">English</div>
+            <div class="language-option" data-lang="es">Español</div>
+            <div class="language-option" data-lang="fr">Français</div>
+            <div class="language-option" data-lang="de">Deutsch</div>
+            <div class="language-option" data-lang="it">Italiano</div>
+            <div class="language-option" data-lang="pt">Português</div>
+            <div class="language-option" data-lang="ru">Русский</div>
+            <div class="language-option" data-lang="ja">日本語</div>
+            <div class="language-option" data-lang="ko">한국어</div>
+            <div class="language-option" data-lang="zh">中文</div>
+            <div class="language-option" data-lang="ar">العربية</div>
+            <div class="language-option" data-lang="hi">हिन्दी</div>
+        </div>
+    </div>
+
+    <!-- Your existing math website content -->
+    <header>
+        <nav class="container">
+            <ul>
+                <li><a href="#home" data-translate="nav.home">Home</a></li>
+                <li><a href="#about" data-translate="nav.about">About</a></li>
+                <li><a href="#math" data-translate="nav.math">Math</a></li>
+                <li><a href="#contact" data-translate="nav.contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="hero">
+            <h1 data-translate="hero.title">Welcome to Math Website</h1>
+            <p data-translate="hero.subtitle">Learn and practice mathematics with our interactive tools and resources.</p>
+        </div>
+
+        <div class="math-section">
+            <h2 data-translate="math.calculator">Calculator</h2>
+            <p>Interactive calculator for solving mathematical problems.</p>
+            <!-- Your calculator content here -->
+        </div>
+
+        <div class="math-section">
+            <h2 data-translate="math.problems">Math Problems</h2>
+            <p>Practice with various mathematical problems and exercises.</p>
+            <!-- Your math problems content here -->
+        </div>
+
+        <div class="math-section">
+            <h2 data-translate="math.solutions">Solutions</h2>
+            <p>Step-by-step solutions to help you understand mathematical concepts.</p>
+            <!-- Your solutions content here -->
+        </div>
+    </main>
+
+    <footer>
+        <p data-translate="footer.copyright">&copy; 2024 Math Website. All rights reserved.</p>
+    </footer>
+
+    <!-- Add translator JavaScript -->
+    <script src="translator-only.js"></script>
+</body>
+</html>
