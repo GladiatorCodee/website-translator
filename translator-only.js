@@ -55,41 +55,157 @@ class WebsiteTranslator {
     loadTranslations() {
         this.translations = {
             en: {
-                // Add your math website translations here
+                // Navigation
                 'nav.home': 'Home',
-                'nav.about': 'About',
-                'nav.math': 'Math',
+                'nav.calculator': 'Calculator',
+                'nav.problems': 'Problems',
+                'nav.solutions': 'Solutions',
                 'nav.contact': 'Contact',
-                'hero.title': 'Welcome to Math Website',
-                'hero.subtitle': 'Learn and practice mathematics with our interactive tools',
-                'math.calculator': 'Calculator',
-                'math.problems': 'Math Problems',
-                'math.solutions': 'Solutions',
-                'footer.copyright': '© 2024 Math Website. All rights reserved.'
+                
+                // Hero Section
+                'hero.title': 'Master Mathematics with HelpMath',
+                'hero.subtitle': 'Interactive learning platform with calculators, practice problems, and step-by-step solutions to help you excel in mathematics.',
+                'hero.button': 'Start Learning Now',
+                
+                // Math Tools
+                'tools.calculator.title': 'Scientific Calculator',
+                'tools.calculator.description': 'Advanced calculator with trigonometry, algebra, calculus, and statistics functions for all your mathematical needs.',
+                'tools.calculator.button': 'Open Calculator',
+                
+                'tools.problems.title': 'Practice Problems',
+                'tools.problems.description': 'Thousands of math problems from basic arithmetic to advanced calculus with instant feedback and progress tracking.',
+                'tools.problems.button': 'Start Practice',
+                
+                'tools.solutions.title': 'Step-by-Step Solutions',
+                'tools.solutions.description': 'Detailed explanations and solutions to help you understand every mathematical concept and problem-solving method.',
+                'tools.solutions.button': 'View Solutions',
+                
+                'tools.graphing.title': 'Graphing Tools',
+                'tools.graphing.description': 'Visualize mathematical functions, equations, and data with our interactive graphing calculator.',
+                'tools.graphing.button': 'Create Graphs',
+                
+                'tools.geometry.title': 'Geometry Helper',
+                'tools.geometry.description': 'Solve geometry problems with interactive shapes, measurements, and construction tools.',
+                'tools.geometry.button': 'Explore Geometry',
+                
+                'tools.statistics.title': 'Statistics Tools',
+                'tools.statistics.description': 'Analyze data with statistical functions, probability calculators, and data visualization tools.',
+                'tools.statistics.button': 'Analyze Data',
+                
+                // Features
+                'features.title': 'Why Choose HelpMath?',
+                'features.interactive.title': 'Interactive Learning',
+                'features.interactive.description': 'Engaging exercises and tools that adapt to your learning pace and style.',
+                'features.progress.title': 'Track Your Progress',
+                'features.progress.description': 'Monitor your improvement with detailed analytics and personalized reports.',
+                'features.support.title': 'Expert Support',
+                'features.support.description': 'Get help from math experts and join our community of learners.',
+                
+                // Footer
+                'footer.copyright': '© 2024 HelpMath - Math Learning Platform. All rights reserved.',
+                'footer.description': 'Making mathematics accessible, understandable, and enjoyable for everyone.'
             },
             es: {
+                // Navigation
                 'nav.home': 'Inicio',
-                'nav.about': 'Acerca de',
-                'nav.math': 'Matemáticas',
+                'nav.calculator': 'Calculadora',
+                'nav.problems': 'Problemas',
+                'nav.solutions': 'Soluciones',
                 'nav.contact': 'Contacto',
-                'hero.title': 'Bienvenido al Sitio de Matemáticas',
-                'hero.subtitle': 'Aprende y practica matemáticas con nuestras herramientas interactivas',
-                'math.calculator': 'Calculadora',
-                'math.problems': 'Problemas de Matemáticas',
-                'math.solutions': 'Soluciones',
-                'footer.copyright': '© 2024 Sitio de Matemáticas. Todos los derechos reservados.'
+                
+                // Hero Section
+                'hero.title': 'Domina las Matemáticas con HelpMath',
+                'hero.subtitle': 'Plataforma de aprendizaje interactiva con calculadoras, problemas de práctica y soluciones paso a paso para ayudarte a sobresalir en matemáticas.',
+                'hero.button': 'Comenzar a Aprender',
+                
+                // Math Tools
+                'tools.calculator.title': 'Calculadora Científica',
+                'tools.calculator.description': 'Calculadora avanzada con funciones de trigonometría, álgebra, cálculo y estadísticas para todas tus necesidades matemáticas.',
+                'tools.calculator.button': 'Abrir Calculadora',
+                
+                'tools.problems.title': 'Problemas de Práctica',
+                'tools.problems.description': 'Miles de problemas matemáticos desde aritmética básica hasta cálculo avanzado con retroalimentación instantánea y seguimiento de progreso.',
+                'tools.problems.button': 'Comenzar Práctica',
+                
+                'tools.solutions.title': 'Soluciones Paso a Paso',
+                'tools.solutions.description': 'Explicaciones detalladas y soluciones para ayudarte a entender cada concepto matemático y método de resolución de problemas.',
+                'tools.solutions.button': 'Ver Soluciones',
+                
+                'tools.graphing.title': 'Herramientas de Gráficos',
+                'tools.graphing.description': 'Visualiza funciones matemáticas, ecuaciones y datos con nuestra calculadora gráfica interactiva.',
+                'tools.graphing.button': 'Crear Gráficos',
+                
+                'tools.geometry.title': 'Ayudante de Geometría',
+                'tools.geometry.description': 'Resuelve problemas de geometría con formas interactivas, mediciones y herramientas de construcción.',
+                'tools.geometry.button': 'Explorar Geometría',
+                
+                'tools.statistics.title': 'Herramientas de Estadística',
+                'tools.statistics.description': 'Analiza datos con funciones estadísticas, calculadoras de probabilidad y herramientas de visualización de datos.',
+                'tools.statistics.button': 'Analizar Datos',
+                
+                // Features
+                'features.title': '¿Por qué elegir HelpMath?',
+                'features.interactive.title': 'Aprendizaje Interactivo',
+                'features.interactive.description': 'Ejercicios y herramientas atractivas que se adaptan a tu ritmo y estilo de aprendizaje.',
+                'features.progress.title': 'Rastrea tu Progreso',
+                'features.progress.description': 'Monitorea tu mejora con análisis detallados y reportes personalizados.',
+                'features.support.title': 'Soporte Experto',
+                'features.support.description': 'Obtén ayuda de expertos en matemáticas y únete a nuestra comunidad de estudiantes.',
+                
+                // Footer
+                'footer.copyright': '© 2024 HelpMath - Plataforma de Aprendizaje de Matemáticas. Todos los derechos reservados.',
+                'footer.description': 'Haciendo las matemáticas accesibles, comprensibles y agradables para todos.'
             },
             fr: {
+                // Navigation
                 'nav.home': 'Accueil',
-                'nav.about': 'À propos',
-                'nav.math': 'Mathématiques',
+                'nav.calculator': 'Calculatrice',
+                'nav.problems': 'Problèmes',
+                'nav.solutions': 'Solutions',
                 'nav.contact': 'Contact',
-                'hero.title': 'Bienvenue sur le Site de Mathématiques',
-                'hero.subtitle': 'Apprenez et pratiquez les mathématiques avec nos outils interactifs',
-                'math.calculator': 'Calculatrice',
-                'math.problems': 'Problèmes de Mathématiques',
-                'math.solutions': 'Solutions',
-                'footer.copyright': '© 2024 Site de Mathématiques. Tous droits réservés.'
+                
+                // Hero Section
+                'hero.title': 'Maîtrisez les Mathématiques avec HelpMath',
+                'hero.subtitle': 'Plateforme d\'apprentissage interactive avec calculatrices, problèmes d\'entraînement et solutions étape par étape pour vous aider à exceller en mathématiques.',
+                'hero.button': 'Commencer à Apprendre',
+                
+                // Math Tools
+                'tools.calculator.title': 'Calculatrice Scientifique',
+                'tools.calculator.description': 'Calculatrice avancée avec fonctions de trigonométrie, algèbre, calcul et statistiques pour tous vos besoins mathématiques.',
+                'tools.calculator.button': 'Ouvrir la Calculatrice',
+                
+                'tools.problems.title': 'Problèmes d\'Entraînement',
+                'tools.problems.description': 'Des milliers de problèmes mathématiques de l\'arithmétique de base au calcul avancé avec retour instantané et suivi des progrès.',
+                'tools.problems.button': 'Commencer l\'Entraînement',
+                
+                'tools.solutions.title': 'Solutions Étape par Étape',
+                'tools.solutions.description': 'Explications détaillées et solutions pour vous aider à comprendre chaque concept mathématique et méthode de résolution de problèmes.',
+                'tools.solutions.button': 'Voir les Solutions',
+                
+                'tools.graphing.title': 'Outils de Graphiques',
+                'tools.graphing.description': 'Visualisez les fonctions mathématiques, équations et données avec notre calculatrice graphique interactive.',
+                'tools.graphing.button': 'Créer des Graphiques',
+                
+                'tools.geometry.title': 'Assistant Géométrie',
+                'tools.geometry.description': 'Résolvez les problèmes de géométrie avec des formes interactives, mesures et outils de construction.',
+                'tools.geometry.button': 'Explorer la Géométrie',
+                
+                'tools.statistics.title': 'Outils de Statistiques',
+                'tools.statistics.description': 'Analysez les données avec des fonctions statistiques, calculatrices de probabilité et outils de visualisation de données.',
+                'tools.statistics.button': 'Analyser les Données',
+                
+                // Features
+                'features.title': 'Pourquoi choisir HelpMath?',
+                'features.interactive.title': 'Apprentissage Interactif',
+                'features.interactive.description': 'Exercices et outils engageants qui s\'adaptent à votre rythme et style d\'apprentissage.',
+                'features.progress.title': 'Suivez vos Progrès',
+                'features.progress.description': 'Surveillez votre amélioration avec des analyses détaillées et des rapports personnalisés.',
+                'features.support.title': 'Support Expert',
+                'features.support.description': 'Obtenez de l\'aide d\'experts en mathématiques et rejoignez notre communauté d\'apprenants.',
+                
+                // Footer
+                'footer.copyright': '© 2024 HelpMath - Plateforme d\'Apprentissage des Mathématiques. Tous droits réservés.',
+                'footer.description': 'Rendre les mathématiques accessibles, compréhensibles et agréables pour tous.'
             }
         };
     }
