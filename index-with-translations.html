@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="page.title">Selection Bars Demo</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add translator CSS -->
+    <link rel="stylesheet" href="math-translator.css">
+</head>
+<body>
+    <header>
+        <div class="search-container">
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search..." data-translate="ui.search.placeholder">
+                <button type="button" id="search-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </button>
+            </div>
+        </div>
+        <div class="language-selector">
+            <div class="language-selector-wrapper">
+                <div class="selected-language">
+                    <span class="language-label" data-translate="ui.language.english">English</span>
+                    <svg class="dropdown-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+                </div>
+                <ul class="language-dropdown">
+                    <li data-lang="en" class="active" data-translate="ui.language.english">English</li>
+                    <li data-lang="es" data-translate="ui.language.spanish">Español</li>
+                    <li data-lang="fr" data-translate="ui.language.french">Français</li>
+                    <li data-lang="de" data-translate="ui.language.german">Deutsch</li>
+                    <li data-lang="it" data-translate="ui.language.italian">Italiano</li>
+                    <li data-lang="ja" data-translate="ui.language.japanese">日本語</li>
+                    <li data-lang="zh" data-translate="ui.language.chinese">中文</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <h1 data-translate="page.main.title">Math Formula Explanations</h1>
+        
+        <section class="demo-section">
+            <h2 data-translate="page.language.title">Language Selection</h2>
+            <p data-translate="page.language.current">Currently selected language: <span id="selected-language-display">English</span></p>
+        </section>
+        
+        <section class="demo-section">
+            <h2 data-translate="page.class.title">Class Selection</h2>
+            <div class="class-selector">
+                <div class="class-selector-label" data-translate="page.class.select">Select Class:</div>
+                <div class="class-options">
+                    <div class="class-option" data-class="7" data-translate="page.class.seven">Class 7</div>
+                    <div class="class-option" data-class="8" data-translate="page.class.eight">Class 8</div>
+                    <div class="class-option" data-class="9" data-translate="page.class.nine">Class 9</div>
+                    <div class="class-option" data-class="10" data-translate="page.class.ten">Class 10</div>
+                </div>
+            </div>
+            <p class="class-selection-info" data-translate="page.class.current">Currently selected class: <span id="selected-class-display">None</span></p>
+        </section>
+        
+        <section class="demo-section formula-section">
+            <h2 data-translate="page.formulas.title">Math Formula Explanations</h2>
+            <p class="formula-intro" data-translate="page.formulas.intro">Select a class above to see math formulas for that grade level.</p>
+            
+            <div id="formula-container" class="formula-container">
+                <!-- Formula content will be loaded here by JavaScript -->
+            </div>
+            
+            <div id="formula-template" class="formula-item hidden">
+                <h3 class="formula-title" data-translate="formula.title">Formula Title</h3>
+                <div class="formula-explanation">
+                    <p data-translate="formula.explanation">Formula explanation text goes here.</p>
+                </div>
+                <div class="formula-workspace">
+                    <div class="workspace-header">
+                        <h4 data-translate="formula.write">Write the formula:</h4>
+                    </div>
+                    <div class="formula-input-area">
+                        <textarea class="formula-input" placeholder="Write the formula here..." data-translate="formula.input.placeholder"></textarea>
+                    </div>
+                    <button class="check-answer-btn" data-translate="formula.check">Check Answer</button>
+                </div>
+                <div class="formula-answer hidden">
+                    <h4 data-translate="formula.correct">Correct Formula:</h4>
+                    <div class="formula-correct-answer">
+                        <p class="formula-math">Formula will appear here</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="demo-section help-section">
+            <h2 data-translate="page.help.title">Need Additional Help?</h2>
+            <p data-translate="page.help.description">If you're having trouble understanding the formula or concept, we've prepared some helpful resources for you.</p>
+            <div class="help-button-container">
+                <button id="formula-help-button" class="formula-help-button">
+                    <span class="help-icon">❓</span>
+                    <span class="help-text" data-translate="page.help.button">Didn't understand the formula?</span>
+                </button>
+            </div>
+            <div id="video-container" class="video-container hidden">
+                <div class="video-wrapper">
+                    <h3 data-translate="page.help.video.title">Video Explanation</h3>
+                    <p data-translate="page.help.video.description">This video might help clarify the concept:</p>
+                    <div class="video-link-container">
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="video-link">
+                            <div class="video-thumbnail">
+                                <span class="play-icon">▶</span>
+                            </div>
+                            <div class="video-info">
+                                <span class="video-title" data-translate="page.help.video.title.content">Understanding Mathematical Formulas - Tutorial</span>
+                                <span class="video-source">YouTube</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="demo-section">
+            <h2 data-translate="page.search.title">Search Results</h2>
+            <div id="search-results">
+                <p data-translate="page.search.placeholder">Enter a search term above to see results.</p>
+            </div>
+        </section>
+        
+        <section class="demo-section info-box">
+            <h2 data-translate="page.history.title">Search History</h2>
+            <div class="info-box-header">
+                <p data-translate="page.history.description">Previously searched questions and answers</p>
+                <button id="clear-history" type="button" data-translate="page.history.clear">Clear History</button>
+            </div>
+            <div id="search-history">
+                <p data-translate="page.history.placeholder">Your search history will appear here.</p>
+            </div>
+        </section>
+        <section class="demo-section info-box feedback-section">
+            <h2 data-translate="page.feedback.title">Help Us Improve</h2>
+            <div class="info-box-header">
+                <p data-translate="page.feedback.description">Let us know what you couldn't find on our website</p>
+            </div>
+            <div class="feedback-container">
+                <form id="feedback-form">
+                    <textarea id="feedback-input" placeholder="Please tell us what you were looking for but couldn't find..." data-translate="page.feedback.placeholder"></textarea>
+                    <button type="submit" id="submit-feedback" data-translate="page.feedback.submit">Submit Feedback</button>
+                </form>
+            </div>
+            <div id="feedback-display" class="feedback-display hidden">
+                <h3 data-translate="page.feedback.thankyou">Thank you for your feedback!</h3>
+                <p data-translate="page.feedback.response">We've noted your request and will consider adding this information in future updates:</p>
+                <div id="submitted-feedback" class="submitted-feedback"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+    <!-- Add translator JavaScript -->
+    <script src="math-translator.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+/* Math Translator Styles - Add this to your existing MathProject5 */
+
+/* Loading Animation */
+#translator-loading {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Language Button Hover Effects (if you want to enhance your existing language buttons) */
+.language-btn:hover,
+.lang-option:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
+}
+
+/* Error Message Animation */
+.translator-error {
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* RTL Support */
+[dir="rtl"] {
+    text-align: right;
+}
+
+[dir="rtl"] .container,
+[dir="rtl"] .math-problem,
+[dir="rtl"] .question {
+    direction: rtl;
+}
+
+/* Ensure math symbols remain consistent across languages */
+.math-symbol,
+.operator,
+.equals-sign {
+    font-family: 'Times New Roman', serif;
+    font-weight: bold;
+}
